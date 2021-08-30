@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BookActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="170dp"
+            android:layout_height="210dp"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btnCurrentReading"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Currently Reading"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnWantToRead"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnWantToRead"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Want to Read"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnAlreadyRead"
+            app:layout_constraintEnd_toEndOf="@+id/btnCurrentReading"
+            app:layout_constraintStart_toStartOf="@+id/btnCurrentReading"
+            app:layout_constraintTop_toBottomOf="@+id/btnCurrentReading" />
+
+        <Button
+            android:id="@+id/btnAlreadyRead"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Already Read"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnAddToFavorite"
+            app:layout_constraintEnd_toEndOf="@+id/btnWantToRead"
+            app:layout_constraintStart_toStartOf="@+id/btnWantToRead"
+            app:layout_constraintTop_toBottomOf="@+id/btnWantToRead" />
+
+        <Button
+            android:id="@+id/btnAddToFavorite"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Add to Favorite"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/btnAlreadyRead"
+            app:layout_constraintStart_toStartOf="@+id/btnAlreadyRead"
+            app:layout_constraintTop_toBottomOf="@+id/btnAlreadyRead" />
+
+        <TextView
+            android:id="@+id/txtBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Book Name: "
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/txtAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Author: "
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/txtBookName" />
+
+        <TextView
+            android:id="@+id/txtPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pages"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/txtAuthor" />
+
+        <TextView
+            android:id="@+id/txtBookNameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Les Miserables"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtBookName"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtBookName" />
+
+        <TextView
+            android:id="@+id/txtAuthorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Victor Hugo"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAuthor"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtAuthor" />
+
+        <TextView
+            android:id="@+id/txtPageNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPages"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtPages" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Description: "
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/txtPages" />
+
+        <TextView
+            android:id="@+id/txtLongDesc"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Long Description"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="138dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="19dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="370dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
